@@ -1,0 +1,333 @@
+.fonctionnalites {
+  position: relative;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  overflow: hidden;
+  color: white;
+}
+
+.fonctionnalites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section - Version Mobile */
+.fonctionnalites-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.fonctionnalites-gallery-title {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.fonctionnalites-title-main {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  animation: fonctionnalites-slideUp 1s ease-out;
+}
+
+.fonctionnalites-title-accent {
+  display: block;
+  background: linear-gradient(45deg, #d97706, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  animation: fonctionnalites-slideUp 1s ease-out 0.3s both;
+}
+
+.fonctionnalites-gallery-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fonctionnalites-slideUp 1s ease-out 0.6s both;
+  line-height: 1.5;
+}
+
+@keyframes fonctionnalites-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background Artistic Elements - Version Mobile */
+.fonctionnalites-art-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fonctionnalites-floating-shapes {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #d97706, #f59e0b);
+  opacity: 0.08;
+  animation: fonctionnalites-float 6s ease-in-out infinite;
+}
+
+.fonctionnalites-shape-1 {
+  width: 100px;
+  height: 100px;
+  top: 5%;
+  left: 2%;
+  animation-delay: 0s;
+}
+
+.fonctionnalites-shape-2 {
+  width: 70px;
+  height: 70px;
+  top: 70%;
+  right: 5%;
+  animation-delay: 2s;
+}
+
+.fonctionnalites-shape-3 {
+  width: 60px;
+  height: 60px;
+  bottom: 10%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes fonctionnalites-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+}
+
+/* Grid - Version Mobile */
+.fonctionnalites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.carte-fonctionnalite {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.carte-fonctionnalite::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.1), rgba(124, 58, 237, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.carte-fonctionnalite:hover {
+  transform: translateY(-5px);
+  border-color: rgba(217, 119, 6, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.carte-fonctionnalite:hover::before {
+  opacity: 1;
+}
+
+.carte-icone {
+  font-size: 1.75rem;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+  background: rgba(245, 158, 11, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.carte-fonctionnalite:hover .carte-icone {
+  background: rgba(245, 158, 11, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(245, 158, 11, 0.3);
+}
+
+.carte-titre {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.3;
+}
+
+.carte-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Version Tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fonctionnalites {
+    padding: 4rem 2rem;
+  }
+
+  .fonctionnalites-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .carte-fonctionnalite {
+    padding: 2rem;
+    min-height: 220px;
+  }
+
+  .carte-titre {
+    font-size: 1.3rem;
+  }
+
+  .carte-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Version Desktop */
+@media (min-width: 1025px) {
+  .fonctionnalites {
+    padding: 5rem 2rem;
+  }
+
+  .fonctionnalites-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .carte-fonctionnalite {
+    padding: 2rem 1.5rem;
+    min-height: 240px;
+  }
+
+  .carte-fonctionnalite:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Version Très Petits Écrans (Mobile Portrait) */
+@media (max-width: 360px) {
+  .fonctionnalites {
+    padding: 2rem 0.5rem;
+  }
+
+  .fonctionnalites-hero {
+    margin-bottom: 2rem;
+  }
+
+  .fonctionnalites-gallery-title {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+
+  .fonctionnalites-gallery-subtitle {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .fonctionnalites-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .carte-fonctionnalite {
+    padding: 1.25rem;
+    min-height: 180px;
+  }
+
+  .carte-icone {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .carte-titre {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .carte-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* Amélioration du touch sur mobile */
+@media (hover: none) and (pointer: coarse) {
+  .carte-fonctionnalite {
+    cursor: default;
+  }
+  
+  .carte-fonctionnalite:active {
+    transform: translateY(-2px);
+    border-color: rgba(217, 119, 6, 0.3);
+  }
+  
+  .carte-fonctionnalite:active .carte-icone {
+    transform: scale(1.05);
+  }
+}
+
+/* Support pour les écrans haute densité */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .carte-fonctionnalite {
+    border-width: 0.5px;
+  }
+}
+
+/* Animation réduite pour les préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  .fonctionnalites-floating-shapes,
+  .carte-fonctionnalite,
+  .carte-icone {
+    animation: none;
+    transition: none;
+  }
+  
+  .fonctionnalites-gallery-title,
+  .fonctionnalites-gallery-subtitle {
+    animation: none;
+  }
+}
